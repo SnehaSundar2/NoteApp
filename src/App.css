@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f7f3e9;
+}
+
+.header {
+  background-color: #aad0d1;
+  color: #fff;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h1 {
+  margin: 0;
+}
+
+.nav a {
+  margin: 0 10px;
+  color: #333;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb {
+  margin: 20px;
+  font-size: 14px;
+  color: #8e8e8e;
+}
+
+.breadcrumb .active {
+  font-weight: bold;
+  color: #333;
+}
