@@ -1,0 +1,128 @@
+/* General styling for the notes page container */
+.notes-container {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f7fc;
+    border-radius: 8px;
+  }
+  
+  h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Styling for the note form */
+  .note-form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  .note-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #555;
+  }
+  
+  .note-form input,
+  .note-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .note-form textarea {
+    min-height: 150px;
+    resize: vertical;
+  }
+  
+  .note-form .button-group {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .note-button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .note-button:hover {
+    background-color: #45a049;
+  }
+  
+  .error-text {
+    color: red;
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  /* Styling for the list of notes */
+  .notes-list {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .notes-list h3 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+  
+  .notes-list ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .notes-list li {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+  }
+  
+  .notes-list li h4 {
+    color: #333;
+    font-size: 18px;
+    margin: 0;
+  }
+  
+  .notes-list li p {
+    color: #555;
+    font-size: 16px;
+    margin-top: 5px;
+  }
+  
+  @media (max-width: 768px) {
+    .notes-container {
+      padding: 15px;
+    }
+  
+    .note-form label,
+    .note-form input,
+    .note-form textarea,
+    .note-button {
+      font-size: 14px;
+    }
+  
+    .note-form textarea {
+      min-height: 120px;
+    }
+  }
+  
