@@ -12,10 +12,15 @@ const LoginPage = () => {
 
   // State for error messages
   const [errorMessage, setErrorMessage] = useState("");
+  const [loading, setLoading] = useState(false); // For loading state
 
   // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // Set loading state to true while waiting for response
+    setLoading(true);
+    setErrorMessage(""); // Reset error message on each submit
 
     try {
       const response = await axios.post("http://localhost:5000/api/signin", {
@@ -24,12 +29,15 @@ const LoginPage = () => {
       });
 
       if (response.status === 200) {
-        setErrorMessage("");
         localStorage.setItem("token", response.data.token); // Save token to localStorage
-        navigate("/homepage"); // Redirect to homepage
+        setLoading(false);
+        navigate("/homepage"); // Redirect to homepage after successful login
       }
     } catch (error) {
-      setErrorMessage(error.response?.data?.message || "Invalid credentials!");
+      setLoading(false); // Stop loading
+      setErrorMessage(
+        error.response?.data?.message || "Invalid credentials or server error!"
+      );
     }
   };
 
@@ -46,6 +54,7 @@ const LoginPage = () => {
             placeholder="Enter your email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            required
           />
 
           <label>Password</label>
@@ -54,11 +63,12 @@ const LoginPage = () => {
             placeholder="Enter your password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            required
           />
 
           <div className="button-group">
-            <button type="submit" className="login-button">
-              Login
+            <button type="submit" className="login-button" disabled={loading}>
+              {loading ? "Logging in..." : "Login"}
             </button>
           </div>
           {errorMessage && <p className="error-text">{errorMessage}</p>}

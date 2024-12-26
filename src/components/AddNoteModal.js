@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './AddNoteModal.css';
+import './AddNoteModal.css'; // Make sure to add the styling
 
 const AddNoteModal = ({ isOpen, onClose, onAddNote }) => {
   const [title, setTitle] = useState('');
@@ -44,4 +44,3 @@ const AddNoteModal = ({ isOpen, onClose, onAddNote }) => {
 };
 
 export default AddNoteModal;
-  
