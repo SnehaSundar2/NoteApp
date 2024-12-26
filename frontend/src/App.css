@@ -1,0 +1,161 @@
+/* General body styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f7f3e9; /* Light background */
+}
+
+/* Header styling */
+.header {
+  background-color: #aad0d1; /* Soft teal background */
+  color: #fff;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Styling for the header title */
+.header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+/* Navigation links styling */
+.nav-links {
+  display: flex;
+}
+
+.nav-links a {
+  margin: 0 10px;
+  color: #333;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+  color: #006666; /* Darker shade for hover effect */
+}
+
+/* Breadcrumbs section styling */
+.breadcrumb {
+  margin: 20px;
+  font-size: 14px;
+  color: #8e8e8e; /* Light gray color */
+}
+
+.breadcrumb .active {
+  font-weight: bold;
+  color: #333;
+}
+
+/* Add Note Button Styling */
+.add-note-btn {
+  padding: 10px 20px;
+  background-color: #66c66d; /* Green background */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.add-note-btn:hover {
+  opacity: 0.8;
+  background-color: #55a759; /* Darker green on hover */
+}
+
+/* Modal Styling */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Overlay background */
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal.open {
+  display: flex;
+}
+
+.modal-content {
+  background-color: #f8f3e2; /* Light beige background */
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.modal-content h2 {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Input and text area styles */
+.input-title,
+.input-content {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.input-title {
+  background-color: #fff;
+}
+
+.input-content {
+  background-color: #f9f9f9;
+  height: 150px;
+  resize: none;
+}
+
+/* Buttons in modal */
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.add-btn,
+.cancel-btn {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.add-btn {
+  background-color: #66c66d;
+  color: white;
+}
+
+.cancel-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+.add-btn:hover,
+.cancel-btn:hover {
+  opacity: 0.9;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  color: #333;
+  cursor: pointer;
+}

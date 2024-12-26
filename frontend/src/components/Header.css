@@ -1,0 +1,38 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #6ec1c2;
+    color: #fff;
+  }
+  
+  .header .logo h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .header nav {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .header nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  
+  .header nav button {
+    background-color: #f76c6c;
+    border: none;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .header nav button:hover {
+    background-color: #d9534f;
+  }
+  
