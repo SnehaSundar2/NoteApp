@@ -1,96 +1,91 @@
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f9f5dc;
-  margin: 0;
-  padding: 0;
-}
-
-.header {
-  background-color: #87cfc3;
-  padding: 20px;
-  text-align: center;
-  color: white;
-  font-size: 24px;
-  position: relative;
-}
-
-.header nav {
-  font-size: 14px;
-  margin-top: 10px;
-  color: #5d5d5d;
-}
-
-.nav-links {
-  position: absolute;
-  right: 20px;
-  top: 20px;
-}
-
-.nav-links a {
-  margin-left: 10px;
-  text-decoration: none;
-  color: white;
-  font-size: 14px;
-}
-
-.login-container {
-  display: flex;
+/* General Styles for Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Background Overlay */
+  display: none;
   justify-content: center;
   align-items: center;
-  height: 80vh;
 }
 
-.login-card {
-  background-color: #fff3e4;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  width: 300px;
+.modal.open {
+  display: flex;
+}
+
+.modal-content {
+  background-color: #f8f3e2;
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
-.login-header h2 {
-  margin: 0 0 20px;
+.modal-content h2 {
   font-family: 'Arial', sans-serif;
-  font-size: 24px;
-  color: #5d5d5d;
+  color: #333;
+  margin-bottom: 20px;
 }
 
-.login-form label {
-  display: block;
-  font-size: 14px;
-  color: #5d5d5d;
-  margin-bottom: 5px;
-  text-align: left;
-}
-
-.login-form input {
+.input-title,
+.input-content {
   width: 100%;
-  padding: 8px;
+  padding: 10px;
   margin-bottom: 15px;
-  border: 1px solid #ccc;
   border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 14px;
 }
 
-.button-group {
+.input-title {
+  background-color: #fff;
+}
+
+.input-content {
+  background-color: #f9f9f9;
+  height: 150px;
+  resize: none;
+}
+
+.modal-buttons {
   display: flex;
   justify-content: space-between;
 }
 
-.login-button {
-  background-color: #f4a261;
-  color: white;
-  border: none;
-  padding: 8px 20px;
+.add-btn,
+.cancel-btn {
+  padding: 10px 20px;
   border-radius: 5px;
+  border: none;
+  font-size: 14px;
   cursor: pointer;
 }
 
-.register-button {
-  background-color: #87cfc3;
+.add-btn {
+  background-color: #66c66d;
   color: white;
+}
+
+.cancel-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+.add-btn:hover,
+.cancel-btn:hover {
+  opacity: 0.9;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
   border: none;
-  padding: 8px 20px;
-  border-radius: 5px;
+  background: transparent;
+  font-size: 20px;
+  color: #333;
   cursor: pointer;
 }
